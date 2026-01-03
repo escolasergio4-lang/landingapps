@@ -177,22 +177,56 @@ h1 {
     height: 120px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: var(--accent-gradient);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    text-align: center;
-    transition: opacity 0.3s ease;
-    border: none;
+/* --- Novos Estilos de Botões --- */
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
+    margin-top: auto;
 }
 
-.btn:hover {
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Botão Primário (Gradiente) - Acessar Web */
+.btn-primary {
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
     opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Botão Secundário (Borda) - Download Windows */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: rgba(168, 85, 247, 0.15);
+    border-color: #a855f7;
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    margin-right: 8px;
 }
 
 footer {
